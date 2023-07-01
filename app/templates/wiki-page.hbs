@@ -18,7 +18,7 @@
       </span>
     </div>
     
-    <div class="col col-xs-2">
+    <div class="col col-sm-2 col-xs-12 pull-right" style="padding: 0 15px 0 0;">
         <a href="#bottom"><i class="fas fa-angle-double-down" aria-hidden="true"></i> Jump to End</a>
     </div>
 </div>
@@ -28,9 +28,13 @@
 
 <hr>
 
-<div class="action-buttons">
-  <a name="bottom"></a>
-  <p><a href="#top"><i class="fas fa-chevron-circle-up"></i> Jump to Top</a></p>
+<div class="row endjump">
+    <div class="col col-xs-12">
+      <div class="pull-right">
+        <a name="bottom"></a>
+        <p><a href="#top"><i class="fas fa-angle-double-up"></i> Jump to Top</a></p>
+      </div>
+    </div>
 </div>
 
 {{#if this.model.tags}}
