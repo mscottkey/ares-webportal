@@ -1,7 +1,8 @@
 {{page-title 'Play'}}
 
  <div class="row">
-   <div class="col col-12 col-md-3">
+   
+   <div class="col col-xs-12 col-md-3 play-sidebar-main">
      
      <div class="play-sidebar">     
      
@@ -123,7 +124,7 @@
      
    </div>
    
-   <div class="col col-12 col-md-9">
+   <div class="col col-xs-12 col-md-9 play-scene-main">
       
       {{#if this.currentScene}}
       <LinkTo @route="scene-live" @model={{this.currentScene.id}} class="play-scene-title">Scene {{this.currentScene.id}}
