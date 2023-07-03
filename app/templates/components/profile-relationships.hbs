@@ -26,9 +26,9 @@
             
             <div class="col col-xs-12 col-sm-8 ansi">
                 {{#if ship.is_npc}}
-                <b>{{ship.name}}</b> (NPC)
+               <div class="relationship-name"><b>{{ship.name}}</b><span class="relationship-npc"> (NPC)</span></div>
                 {{else}}
-                <b><LinkTo @route="char" @model={{ship.name}}>{{ship.name_and_nickname}}</LinkTo></b>
+               <div class="relationship-name"><b><LinkTo @route="char" @model={{ship.name}}>{{ship.name_and_nickname}}</LinkTo></b></div>
                 {{/if}}
                 <AnsiFormat @text={{ship.text}} />
             </div>
