@@ -46,7 +46,7 @@
       <li class="nav-item"><a data-bs-toggle="tab" class="nav-link" href="#stats">Stats</a></li>
     {{/if}}
 	
-    {{#if char.custom.items}}
+    {{#if this.char.custom.items}}
 	    <li class="nav-item"> <a data-bs-toggle="tab" class="nav-link" href="#systemitems">Items</a></li>
 	  {{/if}}
   </ul>
@@ -113,7 +113,7 @@
               </div>
             {{/each}}
           </div>
-        {{/if this.char.custom.items}}
+        {{/if}}
       </div>
       <div id="systemitems" class="tab-pane fade show">
 	      {{#each char.custom.items as |item|}}
