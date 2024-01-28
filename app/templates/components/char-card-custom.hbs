@@ -116,7 +116,7 @@
         {{/if}}
       </div>
       <div id="systemitems" class="tab-pane fade show">
-	      {{#each char.custom.items as |item|}}
+	      {{#each this.char.custom.items as |item|}}
 	        <p><b>{{item.name}}</b><br>
 	        {{{ansi-format text=item.desc}}}</p>
 	      {{/each}}
