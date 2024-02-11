@@ -88,15 +88,15 @@
        <p class="play-section-title">Channels
          
          <a href="#" {{action (mut this.showAddChannel) true}}>
-           <TooltipIcon @position="right" @message="Add Channel" @icon="fa-dutone fa-plus-circle" />
+           <TooltipIcon @position="right" @message="Add Channel" @icon="fa-duotone fa-plus-circle" />
          </a>
           {{#if this.showAllChannels}}
           <a href="#" {{action (mut this.showAllChannels) false}}>
-            <TooltipIcon @position="right" @message="Hide Inactive" @icon="fa-dutone fa-caret-square-up" />
+            <TooltipIcon @position="right" @message="Hide Inactive" @icon="fa-duotone fa-caret-square-up" />
           </a>
           {{else}}
           <a href="#" {{action (mut this.showAllChannels) true}}>
-            <TooltipIcon @position="right" @message="Show All" @icon="fa-dutone fa-caret-square-down" />
+            <TooltipIcon @position="right" @message="Show All" @icon="fa-duotone fa-caret-square-down" />
           </a>
           {{/if}}
        </p>  
