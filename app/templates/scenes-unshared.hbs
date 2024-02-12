@@ -64,13 +64,13 @@
         
         <div class="col col-xs-12 col-sm-2">
           <div class="unshared-scenes-controls">
-                <LinkTo @route="scene-live" @model={{scene.id}}><i class="fa fa-eye" aria-label="View Scene"></i> View </LinkTo>
+                <LinkTo @route="scene-live" @model={{scene.id}}><i class="fa-duotone fa-eye" aria-label="View Scene"></i> View </LinkTo>
               {{#if scene.can_edit}}
-                 <LinkTo @route="scene-edit" @model={{scene.id}}><i class="fa fa-edit" aria-label="Edit Scene"></i> Edit</LinkTo>
-                 <a href="#" {{action 'changeSceneStatus' scene 'restart'}}><i class="fa fa-play" aria-label="Restart Scene"></i> Restart</a>
-                  <a href="#" {{action 'changeSceneStatus' scene 'share'}}><i class="fa fa-share" aria-label="Share Scene"></i> Share</a>                 
+                 <LinkTo @route="scene-edit" @model={{scene.id}}><i class="fa-duotone fa-edit" aria-label="Edit Scene"></i> Edit</LinkTo>
+                 <a href="#" {{action 'changeSceneStatus' scene 'restart'}}><i class="fa-duotone fa-play" aria-label="Restart Scene"></i> Restart</a>
+                  <a href="#" {{action 'changeSceneStatus' scene 'share'}}><i class="fa-duotone fa-share" aria-label="Share Scene"></i> Share</a>                 
               {{/if}}
-                <LinkTo @route="scene-download" @model={{scene.id}}><i class="fa fa-download" aria-label="Download Scene"></i> Download </LinkTo>
+                <LinkTo @route="scene-download" @model={{scene.id}}><i class="fa-duotone fa-download" aria-label="Download Scene"></i> Download </LinkTo>
           </div>
         </div>
         
@@ -80,7 +80,7 @@
   
     {{#if scene.in_trash}}     
     <div class="alert alert-warning scene-deletion-warning">
-      <i class="fa fa-trash"></i>
+      <i class="fa-duotone fa-trash"></i>
       Marked for deletion. Download, share, or restart before it's deleted on {{scene.trash_date}}.
     </div>
     {{/if}}
