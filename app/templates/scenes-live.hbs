@@ -19,7 +19,7 @@
     
     <div class="col col-xs-12 col-sm-6">
       {{#if scene.is_unread}}
-      <span class="badge rounded-pill bg-primary"> <i class="fa fa-flag" aria-label="New Activity"></i></span>
+      <span class="badge rounded-pill bg-primary"> <i class="fa-duotone fa-flag" aria-label="New Activity"></i></span>
       {{/if}}
 
       <LinkTo @route="scene-live" @model={{scene.id}} class="scene-title">
@@ -48,14 +48,14 @@
     <div class="col col-xs-12 col-sm-2">
       <div class="live-scenes-controls">
        {{#if scene.watching}}
-         <a href="#" {{action 'stopWatching' scene.id}}><i class="fa fa-eye-slash" aria-label="Stop Watching"></i></a>
+         <a href="#" {{action 'stopWatching' scene.id}}><i class="fa-duotone fa-eye-slash" aria-label="Stop Watching"></i></a>
 
        {{else}}
          {{#if scene.can_view}}
-           <a href="#" {{action 'watchScene' scene.id}}><i class="fa fa-eye" aria-label="Watch"></i></a>
+           <a href="#" {{action 'watchScene' scene.id}}><i class="fa-duotone fa-eye" aria-label="Watch"></i></a>
       
            {{#if (not scene.participating) }}
-           <a href="#" {{action 'joinScene' scene.id}}><i class="fa fa-sign-in-alt" aria-label="Join"></i></a>
+           <a href="#" {{action 'joinScene' scene.id}}><i class="fa-duotone fa-sign-in-alt" aria-label="Join"></i></a>
            {{/if}}
          {{/if}}
   
@@ -81,7 +81,7 @@
         {{#if scene.summary}}
         <div class="scene-summary">
           <a data-bs-toggle="collapse" href="#details-{{scene.id}}" class="">
-             <i class="fa fa-caret-down" aria-label="Details"></i> Show Details
+             <i class="fa-duotone fa-caret-down" aria-label="Details"></i> Show Details
           </a>
           <div id="details-{{scene.id}}" class="card-collapse collapse">
               <p><AnsiFormat @text={{scene.summary}} />
