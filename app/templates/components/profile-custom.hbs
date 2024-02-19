@@ -1,1 +1,6 @@
-
+<div id="systemitems" class="tab-pane fade">
+{{#each this.char.custom.items as |item|}}
+<p><b>{{item.name}}</b><br>
+{{{ansi-format text=item.desc}}}</p>
+{{/each}}
+</div>
