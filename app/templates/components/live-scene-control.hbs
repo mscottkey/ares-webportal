@@ -2,18 +2,17 @@
 
 <div class="live-scene-controls">
 
-<a href="#" {{action "scrollDown"}}><i class="fas fa-angle-double-down"></i></a>
+<a href="#" {{action "scrollDown"}}><i class="fa-duotone fa-angles-down"></i></a>
   {{#if this.scrollPaused}}
-          <a href="#" {{action "unpauseScroll"}}><i class="fas fa-play">
-          </i> Resume Scrolling</a>
+          <a href="#" {{action "unpauseScroll"}}><i class="fas fa-play"></i></a>
   {{else}}
           <a href="#" {{action "pauseScroll"}}><i class="fas fa-pause"></i></a>
   {{/if}}
   
   {{#if this.scene.is_watching}}
-  <a href="#" {{action 'watchScene' false}}><i class="fas fa-eye-slash"></i></a>
+  <a href="#" {{action 'watchScene' false}}><i class="fa-duotone fa-eye-slash"></i></a>
   {{else}}
-  <a href="#" {{action 'watchScene' true}}><i class="fas fa-eye"></i></a>
+  <a href="#" {{action 'watchScene' true}}><i class="fa-duotone fa-eye"></i></a>
   {{/if}}
 
 </div>
@@ -50,9 +49,9 @@
                 {{#if (not this.scene.reload_required)}}
                   {{#if (and this.isApproved pose.can_edit)}}
                     {{#if (not pose.editActive)}}
-                    <a href="#" {{action 'editScenePose' pose}}><i class="fas fa-edit" aria-label="Edit Pose"></i></a>
+                    <a href="#" {{action 'editScenePose' pose}}><i class="fa-duotone fa-pen-to-square" aria-label="Edit Pose"></i></a>
                     {{#if pose.can_delete}}
-                    <a href="#" {{action (mut this.confirmDeleteScenePose) pose}}><i class="fas fa-trash" aria-label="Delete Pose"></i></a>
+                    <a href="#" {{action (mut this.confirmDeleteScenePose) pose}}><i class="fa-duotone fa-trash" aria-label="Delete Pose"></i></a>
                     {{/if}}
                     {{/if}}
                   {{/if}}
@@ -155,8 +154,8 @@
              {{#if (and (not this.scene.completed) (not this.scene.reload_required))}} 
 
              <div class="pose-buttons">
-                 <button {{action 'addPose' this.poseType.id}} class="btn btn-primary">Add {{this.poseType.title}}</button>
-                 <button {{action 'addPose' 'ooc'}} class="btn btn-secondary">Add OOC</button>
+                 <button {{action 'addPose' this.poseType.id}} class="btn btn-primary">{{this.poseType.title}}</button>
+                 <button {{action 'addPose' 'ooc'}} class="btn btn-secondary">OOC</button>
                  <button {{action 'loadLastPose'}} class="btn btn-secondary">
                    <TooltipIcon @position="right" @message="Reload Last" @icon="fa fa-history" />
                  </button>

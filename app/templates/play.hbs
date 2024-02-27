@@ -2,7 +2,7 @@
 
  <div class="row">
    
-   <div class="col col-xs-12 col-md-3 play-sidebar-main">
+   <div class="col col-xs-12 col-lg-3 play-sidebar-main">
      
      <div class="play-sidebar">     
      
@@ -43,7 +43,7 @@
            <div class="play-selector {{if (eq scene.id this.currentScene.id) 'play-selector-active' ''}}">
                #{{scene.id}} - {{scene.location.name}} 
                {{#if scene.is_unread}}
-                 <span class="badge rounded-pill bg-primary"> <i class="fa fa-flag" aria-label="New Activity"></i></span>
+                 <span class="badge rounded-pill bg-primary"> <i class="fa-duotone fa-flag" aria-label="New Activity"></i></span>
                {{/if}}
            </div>
          </a>
@@ -58,15 +58,15 @@
        
        <p class="play-section-title">Private Messages  
        <a href="#" {{action (mut this.showNewConversation) true}}>
-         <TooltipIcon @position="right" @message="New Conversation" @icon="fa fa-plus-circle" />
+         <TooltipIcon @position="right" @message="New Conversation" @icon="fa-duotone fa-plus-circle" />
        </a>
         {{#if this.showAllPms}}
         <a href="#" {{action (mut this.showAllPms) false}}>
-          <TooltipIcon @position="right" @message="Hide Inactive" @icon="fa fa-caret-square-up" />
+          <TooltipIcon @position="right" @message="Hide Inactive" @icon="fa-duotone fa-caret-square-up" />
         </a>
         {{else}}
         <a href="#" {{action (mut this.showAllPms) true}}>
-          <TooltipIcon @position="right" @message="Show All" @icon="fa fa-caret-square-down" />
+          <TooltipIcon @position="right" @message="Show All" @icon="fa-duotone fa-caret-square-down" />
         </a>
         {{/if}}
        </p>  
@@ -77,7 +77,7 @@
             <div class="play-selector {{if (eq channel.key this.selectedChannel.key) 'play-selector-active' ''}}">                  
               # {{channel.title}}
               {{#if channel.is_hidden}}
-                  <i class="fa fa-microphone-slash"></i>
+                  <i class="fa-duotone fa-microphone-slash"></i>
               {{/if}}
               <span class="badge rounded-pill bg-primary">{{channel.new_messages}}</span>
             </div>
@@ -88,15 +88,15 @@
        <p class="play-section-title">Channels
          
          <a href="#" {{action (mut this.showAddChannel) true}}>
-           <TooltipIcon @position="right" @message="Add Channel" @icon="fa fa-plus-circle" />
+           <TooltipIcon @position="right" @message="Add Channel" @icon="fa-duotone fa-plus-circle" />
          </a>
           {{#if this.showAllChannels}}
           <a href="#" {{action (mut this.showAllChannels) false}}>
-            <TooltipIcon @position="right" @message="Hide Inactive" @icon="fa fa-caret-square-up" />
+            <TooltipIcon @position="right" @message="Hide Inactive" @icon="fa-duotone fa-caret-square-up" />
           </a>
           {{else}}
           <a href="#" {{action (mut this.showAllChannels) true}}>
-            <TooltipIcon @position="right" @message="Show All" @icon="fa fa-caret-square-down" />
+            <TooltipIcon @position="right" @message="Show All" @icon="fa-duotone fa-caret-square-down" />
           </a>
           {{/if}}
        </p>  
@@ -109,7 +109,7 @@
                <div class="play-selector {{if (eq channel.key this.selectedChannel.key) 'play-selector-active' ''}}">
                     # {{channel.title}}
                    {{#if channel.muted}}
-                       <i class="fa fa-microphone-slash"></i>
+                       <i class="fa-duotone fa-microphone-slash"></i>
                    {{/if}}                 
                    <span class="badge rounded-pill bg-primary">{{channel.new_messages}}</span>
                </div>
@@ -124,7 +124,7 @@
      
    </div>
    
-   <div class="col col-xs-12 col-md-9 play-scene-main">
+   <div class="col col-xs-12 col-lg-9 play-scene-main">
       
       {{#if this.currentScene}}
       <LinkTo @route="scene-live" @model={{this.currentScene.id}} class="play-scene-title">Scene {{this.currentScene.id}}

@@ -4,9 +4,9 @@
 
 <div class="chat-controls">
 
-  <a data-bs-toggle="collapse" href="#channel-info"><i class="fas fa-info-circle"></i></a>
+  <a data-bs-toggle="collapse" href="#channel-info"><i class="fa-duotone fa-circle-info"></i></a>
 
-  <a href="#" {{action "scrollDown"}}><i class="fas fa-angle-double-down"></i></a>
+  <a href="#" {{action "scrollDown"}}><i class="fa-duotone fa-angles-down"></i></a>
 
   {{#if this.scrollPaused}}
           <a href="#" {{action "unpauseScroll"}}><i class="fas fa-play"></i></a>
@@ -29,7 +29,7 @@
         
       {{#each this.channel.who as |who|}}
         <CharIconInline @char={{who}} />
-        {{#if who.muted}}<i class="fa fa-microphone-slash"></i>{{/if}}
+        {{#if who.muted}}<i class="fa-duotone fa-microphone-slash"></i>{{/if}}
 
       {{/each}}
       </div>
